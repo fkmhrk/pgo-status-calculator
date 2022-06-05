@@ -1,0 +1,10 @@
+@use "@material/theme" with (
+  $primary: #8d6e63,
+  // $secondary: #76ff03,
+  $background: #fff,
+  $on-primary: #fff
+);
+
+// TopAppBar
+@use "@material/top-app-bar";
+@use "@material/top-app-bar/mdc-top-app-bar";
