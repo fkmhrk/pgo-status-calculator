@@ -6,6 +6,8 @@ import { IPokemonSet } from "./repository/pokemon";
 import { IRepositories } from "./repository/repositories";
 import TopScreen from "./screen/top/TopScreen";
 
+const pathPrefix = "/pgo-status-calculator";
+
 function App() {
   const [repositories, setRepositories] = useState<IRepositories>(
     newRepositories()
@@ -28,7 +30,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route
-              path="/"
+              path={`${pathPrefix}/`}
               element={
                 <TopScreen
                   allPokemons={allPokemons!}
