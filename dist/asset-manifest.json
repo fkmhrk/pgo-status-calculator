@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pgo-status-calculator/static/css/main.7d76a7d6.css",
+    "main.js": "/pgo-status-calculator/static/js/main.ccd6cf29.js",
+    "static/js/787.2995e7e0.chunk.js": "/pgo-status-calculator/static/js/787.2995e7e0.chunk.js",
+    "index.html": "/pgo-status-calculator/index.html",
+    "main.7d76a7d6.css.map": "/pgo-status-calculator/static/css/main.7d76a7d6.css.map",
+    "main.ccd6cf29.js.map": "/pgo-status-calculator/static/js/main.ccd6cf29.js.map",
+    "787.2995e7e0.chunk.js.map": "/pgo-status-calculator/static/js/787.2995e7e0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d76a7d6.css",
+    "static/js/main.ccd6cf29.js"
+  ]
+}
