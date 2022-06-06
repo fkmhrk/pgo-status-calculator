@@ -1,16 +1,44 @@
-import React from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./mdc.scss";
+import { newRepositories } from "./repository/impl/repoModule";
+import { IPokemonSet } from "./repository/pokemon";
+import { IRepositories } from "./repository/repositories";
 import TopScreen from "./screen/top/TopScreen";
 
 function App() {
+  const [repositories, setRepositories] = useState<IRepositories>(
+    newRepositories()
+  );
+  const [allPokemons, setAllPokemons] = useState<IPokemonSet | undefined>();
+  const [initialized, setInitialized] = useState(false);
+
+  useEffect(() => {
+    const f = async () => {
+      const allPokemons = await repositories.pokemon.fetchAll();
+      setAllPokemons(allPokemons);
+      setInitialized(true);
+    };
+    f();
+  }, []);
+
   return (
     <React.Fragment>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<TopScreen></TopScreen>} />
-        </Routes>
-      </BrowserRouter>
+      {initialized ? (
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <TopScreen
+                  allPokemons={allPokemons!}
+                  repo={repositories}
+                ></TopScreen>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      ) : null}
     </React.Fragment>
   );
 }

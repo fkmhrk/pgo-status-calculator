@@ -5,6 +5,21 @@
   $on-primary: #fff
 );
 
+// Button
+@use "@material/button/styles";
+
 // TopAppBar
 @use "@material/top-app-bar";
 @use "@material/top-app-bar/mdc-top-app-bar";
+
+// TextField
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/textfield";
+
+// select
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/select/styles" as select-styles;
+
+@include textfield.core-styles;
