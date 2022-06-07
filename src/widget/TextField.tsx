@@ -14,6 +14,7 @@ export default class TextField extends React.Component<{
   step?: number;
   defaultValue: string;
   required?: boolean;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }> {
   private rootEl!: React.RefObject<HTMLLabelElement>;
   textField!: MDCTextField;
@@ -45,7 +46,6 @@ export default class TextField extends React.Component<{
     const required = this.props.required ?? false;
     const min = this.props.min ?? 0;
     const max = this.props.max ?? 0;
-    const step = this.props.step ?? 1;
     const className = makeClassName(
       "mdc-text-field mdc-text-field--filled",
       this.props
@@ -63,8 +63,9 @@ export default class TextField extends React.Component<{
           defaultValue={this.props.defaultValue}
           min={min}
           max={max}
-          step={step}
+          step={this.props.step}
           required={required}
+          onChange={this.props.onChange}
         />
         <span className="mdc-line-ripple"></span>
       </label>

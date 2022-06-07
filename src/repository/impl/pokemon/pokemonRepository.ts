@@ -3,7 +3,7 @@ import { IPokemonRepository, IPokemonSet } from "../../pokemon";
 import { getCPM } from "./cpm";
 import { allPokemons } from "./pokemonData";
 
-export default class PokemonRepository implements IPokemonRepository {
+export class PokemonRepository implements IPokemonRepository {
   async fetchAll(): Promise<IPokemonSet> {
     return new PokemonSet(allPokemons);
   }

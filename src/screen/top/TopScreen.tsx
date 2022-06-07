@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IPokemonStatus } from "../../entity/pokemon";
 import { IPokemonSet } from "../../repository/pokemon";
 import { IRepositories } from "../../repository/repositories";
@@ -16,6 +16,10 @@ export default function TopScreen(props: {
   const attackEl = useRef<TextField>(null);
   const defenceEl = useRef<TextField>(null);
   const hpEl = useRef<TextField>(null);
+  const [level, setLevel] = useState(1);
+  const [attack, setAttack] = useState(0);
+  const [defence, setDefence] = useState(0);
+  const [hp, setHp] = useState(0);
   const [pokemonID, setPokemonID] = useState(0);
   const [status, setStatus] = useState<IPokemonStatus>();
 
@@ -26,22 +30,18 @@ export default function TopScreen(props: {
     };
   });
 
-  const calc = () => {
+  useEffect(() => {
     if (pokemonID == 0) return;
-    const level = Number(levelEl.current?.getValue() ?? "0");
-    const attach = Number(attackEl.current?.getValue() ?? "0");
-    const defence = Number(defenceEl.current?.getValue() ?? "0");
-    const hp = Number(hpEl.current?.getValue() ?? "0");
 
     const status = props.repo.pokemon.calcStatus(
       pokemonID,
       level,
-      attach,
+      attack,
       defence,
       hp
     );
     setStatus(status);
-  };
+  }, [pokemonID, level, attack, defence, hp]);
 
   return (
     <Scaffold topBar={<TopAppBar title="PGO Status Calculator" />}>
@@ -60,9 +60,10 @@ export default function TopScreen(props: {
           type="number"
           label="Level"
           min={1}
-          max={51}
+          max={55}
           step={0.5}
           defaultValue={"1"}
+          onChange={(e) => setLevel(e.target.valueAsNumber)}
         />
       </div>
       <div>
@@ -74,6 +75,7 @@ export default function TopScreen(props: {
           min={0}
           max={15}
           defaultValue={"0"}
+          onChange={(e) => setAttack(e.target.valueAsNumber)}
         />
         <TextField
           ref={defenceEl}
@@ -83,6 +85,7 @@ export default function TopScreen(props: {
           min={0}
           max={15}
           defaultValue={"0"}
+          onChange={(e) => setDefence(e.target.valueAsNumber)}
         />
         <TextField
           ref={hpEl}
@@ -92,10 +95,8 @@ export default function TopScreen(props: {
           min={0}
           max={15}
           defaultValue={"0"}
+          onChange={(e) => setHp(e.target.valueAsNumber)}
         />
-      </div>
-      <div>
-        <ContainedButton onClick={calc}>Calc</ContainedButton>
       </div>
       {status !== undefined ? (
         <div>

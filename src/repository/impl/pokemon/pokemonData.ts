@@ -7,6 +7,8 @@ export const allPokemons: IPokemon[] = [
     attack: 300,
     defence: 182,
     hp: 214,
+    fastAttacks: [],
+    chargedAttacks: [],
   },
   {
     id: 184,
@@ -14,6 +16,8 @@ export const allPokemons: IPokemon[] = [
     attack: 112,
     defence: 152,
     hp: 225,
+    fastAttacks: [],
+    chargedAttacks: [],
   },
   {
     id: 382,
@@ -21,6 +25,8 @@ export const allPokemons: IPokemon[] = [
     attack: 270,
     defence: 228,
     hp: 205,
+    fastAttacks: [],
+    chargedAttacks: [],
   },
   {
     id: 383,
@@ -28,6 +34,8 @@ export const allPokemons: IPokemon[] = [
     attack: 270,
     defence: 228,
     hp: 205,
+    fastAttacks: [],
+    chargedAttacks: [],
   },
   {
     id: 483,
@@ -35,5 +43,7 @@ export const allPokemons: IPokemon[] = [
     attack: 275,
     defence: 211,
     hp: 205,
+    fastAttacks: [],
+    chargedAttacks: [],
   },
 ];

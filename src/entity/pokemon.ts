@@ -4,6 +4,8 @@ export interface IPokemon {
   attack: number;
   defence: number;
   hp: number;
+  fastAttacks: number[];
+  chargedAttacks: number[];
 }
 
 export interface IPokemonStatus {
