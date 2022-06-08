@@ -1,6 +1,8 @@
 export interface IPokemon {
-  id: number;
+  id: string;
   name: string;
+  type1: number;
+  type2: number;
   attack: number;
   defence: number;
   hp: number;
@@ -9,11 +11,14 @@ export interface IPokemon {
 }
 
 export interface IPokemonStatus {
-  id: number;
+  id: string;
   name: string;
   level: number;
   cp: number;
   attack: number;
   defence: number;
   hp: number;
+  attackIV: number;
+  defenceIV: number;
+  hpIV: number;
 }

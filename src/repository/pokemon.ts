@@ -2,16 +2,26 @@ import { IPokemon, IPokemonStatus } from "../entity/pokemon";
 
 export interface IPokemonRepository {
   fetchAll(): Promise<IPokemonSet>;
+  findById(id: string): IPokemon;
+
   calcStatus(
-    id: number,
+    id: string,
     level: number,
-    attach: number,
+    attack: number,
     defence: number,
     hp: number
   ): IPokemonStatus;
+
+  findLevel(
+    id: string,
+    attack: number,
+    defence: number,
+    hp: number,
+    limitCP: number
+  ): number;
 }
 
 export interface IPokemonSet {
   asList(): IPokemon[];
-  getById(id: number): IPokemon;
+  getById(id: string): IPokemon;
 }

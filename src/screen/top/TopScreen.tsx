@@ -7,6 +7,7 @@ import TopAppBar from "../../TopAppBar";
 import ContainedButton from "../../widget/ContainedButton";
 import Select from "../../widget/Select";
 import TextField from "../../widget/TextField";
+import AttackArea from "./AttackArea";
 
 export default function TopScreen(props: {
   allPokemons: IPokemonSet;
@@ -20,18 +21,46 @@ export default function TopScreen(props: {
   const [attack, setAttack] = useState(0);
   const [defence, setDefence] = useState(0);
   const [hp, setHp] = useState(0);
-  const [pokemonID, setPokemonID] = useState(0);
+  const [pokemonID, setPokemonID] = useState("0");
   const [status, setStatus] = useState<IPokemonStatus>();
+  const [pokeBox, setPokeBox] = useState<IPokemonStatus[]>([]);
+  const [aSide, setASide] = useState<IPokemonStatus>();
+  const [bSide, setBSide] = useState<IPokemonStatus>();
 
   const items = props.allPokemons.asList().map((p) => {
     return {
       label: p.name,
-      value: `${p.id}`,
+      value: p.id,
     };
   });
 
+  const findGL = () => findLevel(1500);
+  const findUL = () => findLevel(2500);
+
+  const findLevel = (limit: number) => {
+    if (pokemonID === "0") return;
+    const foundLevel = props.repo.pokemon.findLevel(
+      pokemonID,
+      attack,
+      defence,
+      hp,
+      limit
+    );
+    setLevel(foundLevel);
+    levelEl.current?.setValue(`${foundLevel}`);
+  };
+
+  const add = () => {
+    if (status === undefined) return;
+
+    pokeBox.push(status);
+    setPokeBox(pokeBox);
+    setLevel(1);
+    levelEl.current?.setValue("1");
+  };
+
   useEffect(() => {
-    if (pokemonID == 0) return;
+    if (pokemonID === "0") return;
 
     const status = props.repo.pokemon.calcStatus(
       pokemonID,
@@ -50,7 +79,7 @@ export default function TopScreen(props: {
           defaultValue={""}
           label="Pokemon"
           items={items}
-          onChange={(value) => setPokemonID(Number(value))}
+          onChange={(value) => setPokemonID(value)}
         />
       </div>
       <div>
@@ -65,6 +94,8 @@ export default function TopScreen(props: {
           defaultValue={"1"}
           onChange={(e) => setLevel(e.target.valueAsNumber)}
         />
+        <ContainedButton onClick={findGL}>GL</ContainedButton>
+        <ContainedButton onClick={findUL}>UL</ContainedButton>
       </div>
       <div>
         <TextField
@@ -98,6 +129,9 @@ export default function TopScreen(props: {
           onChange={(e) => setHp(e.target.valueAsNumber)}
         />
       </div>
+      <div>
+        <ContainedButton onClick={add}>Add</ContainedButton>
+      </div>
       {status !== undefined ? (
         <div>
           <table>
@@ -127,6 +161,64 @@ export default function TopScreen(props: {
             </tbody>
           </table>
         </div>
+      ) : null}
+
+      {pokeBox.length > 0 ? (
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>CP</th>
+                <th>Level</th>
+                <th>IV</th>
+                <th>Attack</th>
+                <th>Defence</th>
+                <th>HP</th>
+              </tr>
+            </thead>
+            <tbody>
+              {pokeBox.map((status, index) => (
+                <tr key={index}>
+                  <th>{status.name}</th>
+                  <td>{status.cp}</td>
+                  <td>Lv{status.level}</td>
+                  <td>
+                    {status.attackIV}/{status.defenceIV}/{status.hpIV}
+                  </td>
+                  <td>{status.attack}</td>
+                  <td>{status.defence}</td>
+                  <td>{status.hp}</td>
+                  <td>
+                    <ContainedButton onClick={() => setASide(status)}>
+                      A
+                    </ContainedButton>
+                  </td>
+                  <td>
+                    <ContainedButton onClick={() => setBSide(status)}>
+                      B
+                    </ContainedButton>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : null}
+
+      {aSide !== undefined && bSide !== undefined ? (
+        <>
+          <AttackArea
+            repo={props.repo}
+            attackSide={aSide}
+            defenceSide={bSide}
+          />
+          <AttackArea
+            repo={props.repo}
+            attackSide={bSide}
+            defenceSide={aSide}
+          />
+        </>
       ) : null}
     </Scaffold>
   );
