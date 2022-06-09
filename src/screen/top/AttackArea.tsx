@@ -3,6 +3,7 @@ import { IRepositories } from "../../repository/repositories";
 
 export default function AttackArea(props: {
   repo: IRepositories;
+  vsType: "1" | "2";
   attackSide: IPokemonStatus;
   defenceSide: IPokemonStatus;
 }) {
@@ -21,12 +22,11 @@ export default function AttackArea(props: {
       );
       return {
         name: attack.name,
-        raidValue: attack.raidValue,
-        trainerValue: attack.trainerValue,
+        value: props.vsType === "1" ? attack.raidValue : attack.trainerValue,
+        damage:
+          props.vsType === "1" ? damage.raidDamage : damage.trainerDamager,
         typeMultiply: damage.typeMultiply,
         effective: damage.effective,
-        raidDamage: damage.raidDamage,
-        trainerDamage: damage.trainerDamager,
       };
     });
   const chargedAttacks = attackPokemon.chargedAttacks
@@ -41,12 +41,12 @@ export default function AttackArea(props: {
       );
       return {
         name: attack.name,
-        raidValue: attack.raidValue,
+        value: props.vsType === "1" ? attack.raidValue : attack.trainerValue,
+        damage:
+          props.vsType === "1" ? damage.raidDamage : damage.trainerDamager,
         trainerValue: attack.trainerValue,
         typeMultiply: damage.typeMultiply,
         effective: damage.effective,
-        raidDamage: damage.raidDamage,
-        trainerDamage: damage.trainerDamager,
       };
     });
   return (
@@ -55,7 +55,6 @@ export default function AttackArea(props: {
         {props.attackSide.name}が{props.defenceSide.name}を攻撃
       </h2>
       <h3>Fast Attack</h3>
-      <h4>Raid</h4>
       <table>
         <thead>
           <tr>
@@ -70,41 +69,16 @@ export default function AttackArea(props: {
           {fastAttacks.map((attack, index) => (
             <tr key={index}>
               <th>{attack.name}</th>
-              <td>{attack.raidValue}</td>
+              <td>{attack.value}</td>
               <td>x{attack.typeMultiply}</td>
               <td>x{attack.effective}</td>
-              <td>{attack.raidDamage}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <h4>Trainer</h4>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Value</th>
-            <th>Type</th>
-            <th>Effective</th>
-            <th>Damage</th>
-          </tr>
-        </thead>
-        <tbody>
-          {fastAttacks.map((attack, index) => (
-            <tr key={index}>
-              <th>{attack.name}</th>
-              <td>{attack.trainerValue}</td>
-              <td>x{attack.typeMultiply}</td>
-              <td>x{attack.effective}</td>
-              <td>{attack.trainerDamage}</td>
+              <td>{attack.damage}</td>
             </tr>
           ))}
         </tbody>
       </table>
 
       <h3>Charged Attack</h3>
-      <h4>Raid</h4>
       <table>
         <thead>
           <tr>
@@ -119,34 +93,10 @@ export default function AttackArea(props: {
           {chargedAttacks.map((attack, index) => (
             <tr key={index}>
               <th>{attack.name}</th>
-              <td>{attack.raidValue}</td>
+              <td>{attack.value}</td>
               <td>x{attack.typeMultiply}</td>
               <td>x{attack.effective}</td>
-              <td>{attack.raidDamage}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <h4>Trainer</h4>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Value</th>
-            <th>Type</th>
-            <th>Effective</th>
-            <th>Damage</th>
-          </tr>
-        </thead>
-        <tbody>
-          {chargedAttacks.map((attack, index) => (
-            <tr key={index}>
-              <th>{attack.name}</th>
-              <td>{attack.trainerValue}</td>
-              <td>x{attack.typeMultiply}</td>
-              <td>x{attack.effective}</td>
-              <td>{attack.trainerDamage}</td>
+              <td>{attack.damage}</td>
             </tr>
           ))}
         </tbody>
