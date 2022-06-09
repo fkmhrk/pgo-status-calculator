@@ -30,6 +30,20 @@ export const allAttackMap: { [key: number]: IAttack } = {
     raidValue: 20,
     trainerValue: 16,
   },
+  5: {
+    id: 5,
+    name: "うちおとす",
+    type: PokeType.rock,
+    raidValue: 16,
+    trainerValue: 12,
+  },
+  6: {
+    id: 6,
+    name: "アイアンテール",
+    type: PokeType.steel,
+    raidValue: 15,
+    trainerValue: 9,
+  },
   1000: {
     id: 1000,
     name: "じゃれつく",
@@ -78,5 +92,19 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.fire,
     raidValue: 70,
     trainerValue: 90,
+  },
+  1007: {
+    id: 1007,
+    name: "ストーンエッジ",
+    type: PokeType.rock,
+    raidValue: 100,
+    trainerValue: 100,
+  },
+  1008: {
+    id: 1008,
+    name: "ラスターカノン",
+    type: PokeType.steel,
+    raidValue: 100,
+    trainerValue: 110,
   },
 };

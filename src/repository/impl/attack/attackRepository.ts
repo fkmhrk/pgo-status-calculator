@@ -40,7 +40,7 @@ export class AttackRepository implements IAttackRepository {
     const trainerValue = baseValue * attack.trainerValue;
 
     return {
-      typeMultiply: typeMatch ? 1.2 : 1,
+      typeMultiply: typeMatch,
       effective: type1Effective * type2Effective,
       raidDamage: Math.floor(raidValue),
       trainerDamager: Math.floor(trainerValue),
