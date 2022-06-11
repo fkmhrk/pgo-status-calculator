@@ -79,6 +79,13 @@ export const allAttackMap: { [key: number]: IAttack } = {
     raidValue: 8,
     trainerValue: 5,
   },
+  12: {
+    id: 12,
+    name: "つつく",
+    type: PokeType.flying,
+    raidValue: 10,
+    trainerValue: 6,
+  },
   1000: {
     id: 1000,
     name: "じゃれつく",
@@ -204,5 +211,33 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.steel,
     raidValue: 60,
     trainerValue: 70,
+  },
+  1018: {
+    id: 1018,
+    name: "ゴッドバード",
+    type: PokeType.flying,
+    raidValue: 80,
+    trainerValue: 75,
+  },
+  1019: {
+    id: 1019,
+    name: "マジカルシャイン",
+    type: PokeType.fairy,
+    raidValue: 100,
+    trainerValue: 110,
+  },
+  1020: {
+    id: 1020,
+    name: "りゅうのはどう",
+    type: PokeType.dragon,
+    raidValue: 90,
+    trainerValue: 90,
+  },
+  1021: {
+    id: 1021,
+    name: "ムーンフォース",
+    type: PokeType.fairy,
+    raidValue: 130,
+    trainerValue: 110,
   },
 };

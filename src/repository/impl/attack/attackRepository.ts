@@ -42,8 +42,8 @@ export class AttackRepository implements IAttackRepository {
     return {
       typeMultiply: typeMatch,
       effective: type1Effective * type2Effective,
-      raidDamage: Math.floor(raidValue),
-      trainerDamager: Math.floor(trainerValue),
+      raidDamage: Math.floor(raidValue) + 1,
+      trainerDamager: Math.floor(trainerValue * 1.3) + 1,
     };
   }
 }

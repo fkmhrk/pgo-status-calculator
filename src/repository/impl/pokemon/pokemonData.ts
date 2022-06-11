@@ -25,6 +25,17 @@ export const allPokemons: IPokemon[] = [
     chargedAttacks: [1000, 1001, 1002],
   },
   {
+    id: "334",
+    name: "チルタリス",
+    type1: PokeType.dragon,
+    type2: PokeType.flying,
+    attack: 141,
+    defence: 201,
+    hp: 181,
+    fastAttacks: [12, 10],
+    chargedAttacks: [1018, 1019, 1020, 1021],
+  },
+  {
     id: "382",
     name: "カイオーガ",
     type1: PokeType.water,
