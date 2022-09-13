@@ -114,6 +114,13 @@ export const allAttackMap: { [key: number]: IAttack } = {
     raidValue: 10,
     trainerValue: 6,
   },
+  17: {
+    id: 17,
+    name: "エアスラッシュ",
+    type: PokeType.flying,
+    raidValue: 14,
+    trainerValue: 9,
+  },
   1000: {
     id: 1000,
     name: "じゃれつく",
@@ -309,5 +316,33 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.ghost,
     raidValue: 50,
     trainerValue: 50,
+  },
+  1028: {
+    id: 1028,
+    name: "リーフブレード",
+    type: PokeType.grass,
+    raidValue: 70,
+    trainerValue: 70,
+  },
+  1029: {
+    id: 1029,
+    name: "シザークロス",
+    type: PokeType.bug,
+    raidValue: 45,
+    trainerValue: 45,
+  },
+  1030: {
+    id: 1030,
+    name: "つじぎり",
+    type: PokeType.dark,
+    raidValue: 50,
+    trainerValue: 50,
+  },
+  1031: {
+    id: 1031,
+    name: "つばめがえし",
+    type: PokeType.flying,
+    raidValue: 55,
+    trainerValue: 55,
   },
 };

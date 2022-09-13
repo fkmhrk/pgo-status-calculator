@@ -101,4 +101,15 @@ export const allPokemons: IPokemon[] = [
     fastAttacks: [10, 11],
     chargedAttacks: [1016, 1017, 1010],
   },
+  {
+    id: "798",
+    name: "カミツルギ",
+    type1: PokeType.grass,
+    type2: PokeType.steel,
+    attack: 323,
+    defence: 182,
+    hp: 139,
+    fastAttacks: [17, 13],
+    chargedAttacks: [1028, 1029, 1030],
+  },
 ];
