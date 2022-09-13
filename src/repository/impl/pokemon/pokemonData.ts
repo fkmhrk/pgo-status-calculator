@@ -3,6 +3,17 @@ import { PokeType } from "../../../entity/type";
 
 export const allPokemons: IPokemon[] = [
   {
+    id: "3",
+    name: "フシギバナ",
+    type1: PokeType.grass,
+    type2: PokeType.poison,
+    attack: 198,
+    defence: 189,
+    hp: 190,
+    fastAttacks: [13, 14],
+    chargedAttacks: [1022, 1023, 1014, 1024],
+  },
+  {
     id: "150",
     name: "ミュウツー",
     type1: PokeType.psychic,
@@ -23,6 +34,17 @@ export const allPokemons: IPokemon[] = [
     hp: 225,
     fastAttacks: [1, 2],
     chargedAttacks: [1000, 1001, 1002],
+  },
+  {
+    id: "302",
+    name: "ヤミラミ",
+    type1: PokeType.dark,
+    type2: PokeType.ghost,
+    attack: 141,
+    defence: 136,
+    hp: 137,
+    fastAttacks: [15, 16],
+    chargedAttacks: [1025, 1026, 1027],
   },
   {
     id: "334",
@@ -78,5 +100,16 @@ export const allPokemons: IPokemon[] = [
     hp: 205,
     fastAttacks: [10, 11],
     chargedAttacks: [1016, 1017, 1010],
+  },
+  {
+    id: "798",
+    name: "カミツルギ",
+    type1: PokeType.grass,
+    type2: PokeType.steel,
+    attack: 323,
+    defence: 182,
+    hp: 139,
+    fastAttacks: [17, 13],
+    chargedAttacks: [1028, 1029, 1030],
   },
 ];
