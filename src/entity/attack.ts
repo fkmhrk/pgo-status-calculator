@@ -4,4 +4,5 @@ export interface IAttack {
   type: number;
   raidValue: number;
   trainerValue: number;
+  energy: number;
 }

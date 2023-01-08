@@ -2,10 +2,11 @@
   "name": "pgo-status-calculator",
   "version": "0.1.0",
   "private": true,
-  "homepage":"/pgo-status-calculator",
+  "homepage": "/pgo-status-calculator",
   "dependencies": {
     "@material/button": "^14.0.0",
     "@material/select": "^14.0.0",
+    "@material/tab-bar": "^14.0.0",
     "@material/textfield": "^14.0.0",
     "@material/theme": "^14.0.0",
     "@material/top-app-bar": "^14.0.0",
