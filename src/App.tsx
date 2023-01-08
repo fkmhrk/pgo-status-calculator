@@ -4,6 +4,7 @@ import "./mdc.scss";
 import { newRepositories } from "./repository/impl/repoModule";
 import { IPokemonSet } from "./repository/pokemon";
 import { IRepositories } from "./repository/repositories";
+import AttacksScreen from "./screen/attacks/AttacksScreen";
 import TopScreen from "./screen/top/TopScreen";
 
 const pathPrefix = "/pgo-status-calculator";
@@ -36,6 +37,15 @@ function App() {
                   allPokemons={allPokemons!}
                   repo={repositories}
                 ></TopScreen>
+              }
+            />
+            <Route
+              path={`${pathPrefix}/attacks`}
+              element={
+                <AttacksScreen
+                  allPokemons={allPokemons!}
+                  repo={repositories}
+                ></AttacksScreen>
               }
             />
           </Routes>

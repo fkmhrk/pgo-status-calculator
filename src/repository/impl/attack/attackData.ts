@@ -8,6 +8,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.water,
     raidValue: 12,
     trainerValue: 7,
+    energy: 11,
   },
   2: {
     id: 2,
@@ -15,6 +16,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.rock,
     raidValue: 15,
     trainerValue: 9,
+    energy: 7,
   },
   3: {
     id: 3,
@@ -22,6 +24,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.psychic,
     raidValue: 5,
     trainerValue: 3,
+    energy: 9,
   },
   4: {
     id: 4,
@@ -29,6 +32,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.psychic,
     raidValue: 20,
     trainerValue: 16,
+    energy: 12,
   },
   5: {
     id: 5,
@@ -36,6 +40,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.rock,
     raidValue: 16,
     trainerValue: 12,
+    energy: 8,
   },
   6: {
     id: 6,
@@ -43,6 +48,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.steel,
     raidValue: 15,
     trainerValue: 9,
+    energy: 6,
   },
   7: {
     id: 7,
@@ -50,6 +56,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.water,
     raidValue: 16,
     trainerValue: 12,
+    energy: 8,
   },
   8: {
     id: 8,
@@ -57,6 +64,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.ground,
     raidValue: 5,
     trainerValue: 3,
+    energy: 9,
   },
   9: {
     id: 9,
@@ -64,6 +72,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.dragon,
     raidValue: 15,
     trainerValue: 13,
+    energy: 9,
   },
   10: {
     id: 10,
@@ -71,6 +80,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.dragon,
     raidValue: 6,
     trainerValue: 4,
+    energy: 3,
   },
   11: {
     id: 11,
@@ -78,6 +88,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.steel,
     raidValue: 8,
     trainerValue: 5,
+    energy: 6,
   },
   12: {
     id: 12,
@@ -85,6 +96,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.flying,
     raidValue: 10,
     trainerValue: 6,
+    energy: 5,
   },
   13: {
     id: 13,
@@ -92,6 +104,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.grass,
     raidValue: 13,
     trainerValue: 10,
+    energy: 4,
   },
   14: {
     id: 14,
@@ -99,6 +112,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.grass,
     raidValue: 7,
     trainerValue: 5,
+    energy: 8,
   },
   15: {
     id: 15,
@@ -106,6 +120,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.ghost,
     raidValue: 9,
     trainerValue: 6,
+    energy: 8,
   },
   16: {
     id: 16,
@@ -113,6 +128,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.dark,
     raidValue: 10,
     trainerValue: 6,
+    energy: 6,
   },
   17: {
     id: 17,
@@ -120,6 +136,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.flying,
     raidValue: 14,
     trainerValue: 9,
+    energy: 9,
   },
   1000: {
     id: 1000,
@@ -127,6 +144,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.fairy,
     raidValue: 90,
     trainerValue: 90,
+    energy: 60,
   },
   1001: {
     id: 1001,
@@ -134,6 +152,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.water,
     raidValue: 130,
     trainerValue: 130,
+    energy: 75,
   },
   1002: {
     id: 1002,
@@ -141,6 +160,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.ice,
     raidValue: 90,
     trainerValue: 90,
+    energy: 55,
   },
   1003: {
     id: 1003,
@@ -148,6 +168,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.psychic,
     raidValue: 90,
     trainerValue: 90,
+    energy: 55,
   },
   1004: {
     id: 1004,
@@ -155,6 +176,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.fighting,
     raidValue: 140,
     trainerValue: 150,
+    energy: 75,
   },
   1005: {
     id: 1005,
@@ -162,6 +184,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.electric,
     raidValue: 80,
     trainerValue: 90,
+    energy: 55,
   },
   1006: {
     id: 1006,
@@ -169,6 +192,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.fire,
     raidValue: 70,
     trainerValue: 90,
+    energy: 55,
   },
   1007: {
     id: 1007,
@@ -176,6 +200,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.rock,
     raidValue: 100,
     trainerValue: 100,
+    energy: 55,
   },
   1008: {
     id: 1008,
@@ -183,6 +208,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.steel,
     raidValue: 100,
     trainerValue: 110,
+    energy: 70,
   },
   1009: {
     id: 1009,
@@ -190,6 +216,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.ice,
     raidValue: 130,
     trainerValue: 140,
+    energy: 75,
   },
   1010: {
     id: 1010,
@@ -197,6 +224,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.electric,
     raidValue: 100,
     trainerValue: 100,
+    energy: 60,
   },
   1011: {
     id: 1011,
@@ -204,6 +232,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.water,
     raidValue: 65,
     trainerValue: 65,
+    energy: 40,
   },
   1012: {
     id: 1012,
@@ -211,6 +240,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.ground,
     raidValue: 140,
     trainerValue: 120,
+    energy: 65,
   },
   1013: {
     id: 1013,
@@ -218,6 +248,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.fire,
     raidValue: 140,
     trainerValue: 140,
+    energy: 80,
   },
   1014: {
     id: 1014,
@@ -225,6 +256,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.grass,
     raidValue: 180,
     trainerValue: 150,
+    energy: 80,
   },
   1015: {
     id: 1015,
@@ -232,6 +264,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.fire,
     raidValue: 55,
     trainerValue: 55,
+    energy: 40,
   },
   1016: {
     id: 1016,
@@ -239,6 +272,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.dragon,
     raidValue: 150,
     trainerValue: 150,
+    energy: 65,
   },
   1017: {
     id: 1017,
@@ -246,6 +280,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.steel,
     raidValue: 60,
     trainerValue: 70,
+    energy: 50,
   },
   1018: {
     id: 1018,
@@ -253,6 +288,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.flying,
     raidValue: 80,
     trainerValue: 75,
+    energy: 45,
   },
   1019: {
     id: 1019,
@@ -260,6 +296,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.fairy,
     raidValue: 100,
     trainerValue: 110,
+    energy: 70,
   },
   1020: {
     id: 1020,
@@ -267,6 +304,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.dragon,
     raidValue: 90,
     trainerValue: 90,
+    energy: 60,
   },
   1021: {
     id: 1021,
@@ -274,6 +312,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.fairy,
     raidValue: 130,
     trainerValue: 110,
+    energy: 60,
   },
   1022: {
     id: 1022,
@@ -281,6 +320,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.poison,
     raidValue: 80,
     trainerValue: 80,
+    energy: 50,
   },
   1023: {
     id: 1023,
@@ -288,6 +328,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.grass,
     raidValue: 110,
     trainerValue: 110,
+    energy: 65,
   },
   1024: {
     id: 1024,
@@ -295,6 +336,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.grass,
     raidValue: 100,
     trainerValue: 100,
+    energy: 45,
   },
   1025: {
     id: 1025,
@@ -302,6 +344,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.rock,
     raidValue: 80,
     trainerValue: 80,
+    energy: 60,
   },
   1026: {
     id: 1026,
@@ -309,6 +352,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.dark,
     raidValue: 70,
     trainerValue: 70,
+    energy: 45,
   },
   1027: {
     id: 1027,
@@ -316,6 +360,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.ghost,
     raidValue: 50,
     trainerValue: 50,
+    energy: 45,
   },
   1028: {
     id: 1028,
@@ -323,6 +368,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.grass,
     raidValue: 70,
     trainerValue: 70,
+    energy: 35,
   },
   1029: {
     id: 1029,
@@ -330,6 +376,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.bug,
     raidValue: 45,
     trainerValue: 45,
+    energy: 35,
   },
   1030: {
     id: 1030,
@@ -337,6 +384,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.dark,
     raidValue: 50,
     trainerValue: 50,
+    energy: 35,
   },
   1031: {
     id: 1031,
@@ -344,5 +392,15 @@ export const allAttackMap: { [key: number]: IAttack } = {
     type: PokeType.flying,
     raidValue: 55,
     trainerValue: 55,
+    energy: 45,
   },
 };
+const allAttackList = Object.keys(allAttackMap).map(
+  (key) => allAttackMap[Number(key)]
+);
+export const allFastAttacks = allAttackList.filter(
+  (attack) => attack.id < 1000
+);
+export const allChargedAttacks = allAttackList.filter(
+  (attack) => attack.id >= 1000
+);

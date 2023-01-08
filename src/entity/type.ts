@@ -19,3 +19,29 @@ export const PokeType = {
   dark: 17, // あく
   fairy: 18, // フェアリー
 };
+
+const typeStringMap = [
+  "",
+  "ノーマル",
+  "かくとう",
+  "ひこう",
+  "どく",
+  "じめん",
+  "いわ",
+  "むし",
+  "ゴースト",
+  "はがね",
+  "ほのお",
+  "みず",
+  "くさ",
+  "でんき",
+  "エスパー",
+  "こおり",
+  "ドラゴン",
+  "あく",
+  "フェアリー",
+];
+
+export const toTypeString = (type: number) => {
+  return typeStringMap[type];
+};
