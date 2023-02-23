@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pgo-status-calculator/static/css/main.b3fba341.css",
-    "main.js": "/pgo-status-calculator/static/js/main.93efbfbd.js",
+    "main.js": "/pgo-status-calculator/static/js/main.15acf9e1.js",
     "static/js/787.2995e7e0.chunk.js": "/pgo-status-calculator/static/js/787.2995e7e0.chunk.js",
     "index.html": "/pgo-status-calculator/index.html",
     "main.b3fba341.css.map": "/pgo-status-calculator/static/css/main.b3fba341.css.map",
-    "main.93efbfbd.js.map": "/pgo-status-calculator/static/js/main.93efbfbd.js.map",
+    "main.15acf9e1.js.map": "/pgo-status-calculator/static/js/main.15acf9e1.js.map",
     "787.2995e7e0.chunk.js.map": "/pgo-status-calculator/static/js/787.2995e7e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3fba341.css",
-    "static/js/main.93efbfbd.js"
+    "static/js/main.15acf9e1.js"
   ]
 }
