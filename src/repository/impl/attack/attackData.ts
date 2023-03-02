@@ -717,7 +717,7 @@ export const allAttackMap: { [key: number]: IAttack } = {
   1061: {
     id: 1061,
     name: "だんがいのつるぎ",
-    type: PokeType.flying,
+    type: PokeType.ground,
     raidValue: 130,
     trainerValue: 130,
     energy: 60,
