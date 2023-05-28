@@ -44,7 +44,7 @@ export const allPokemons: IPokemon[] = [
     defence: 182,
     hp: 214,
     fastAttacks: [3, 4],
-    chargedAttacks: [1003, 1004, 1005, 1006, 1002, 1035],
+    chargedAttacks: [1003, 1004, 1005, 1006, 1002, 1035, 1063],
   },
   {
     id: "184",

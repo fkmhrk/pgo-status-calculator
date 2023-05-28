@@ -730,6 +730,14 @@ export const allAttackMap: { [key: number]: IAttack } = {
     trainerValue: 130,
     energy: 60,
   },
+  1063: {
+    id: 1063,
+    name: "サイコブレイク",
+    type: PokeType.psychic,
+    raidValue: 90,
+    trainerValue: 90,
+    energy: 45,
+  },
 };
 const allAttackList = Object.keys(allAttackMap).map(
   (key) => allAttackMap[Number(key)]
