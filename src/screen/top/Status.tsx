@@ -12,7 +12,7 @@ export default function StatusArea(props: {
           <tr>
             <th>Name</th>
             <td>
-              {status.name} Lv{status.level}
+              {status.name} {status.isShadow ? "(Shadow)" : ""} Lv{status.level}
             </td>
           </tr>
           <tr>

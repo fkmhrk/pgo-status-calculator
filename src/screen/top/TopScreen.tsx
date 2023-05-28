@@ -29,6 +29,7 @@ export default function TopScreen(props: {
   const [attack, setAttack] = useState(0);
   const [defence, setDefence] = useState(0);
   const [hp, setHp] = useState(0);
+  const [isShadow, setIsShadow] = useState(false);
   const [pokemonID, setPokemonID] = useState("0");
   const [status, setStatus] = useState<IPokemonStatus>();
   const [pokeBox, setPokeBox] = useState<IPokemonStatus[]>([]);
@@ -76,10 +77,11 @@ export default function TopScreen(props: {
       level,
       attack,
       defence,
-      hp
+      hp,
+      isShadow
     );
     setStatus(status);
-  }, [pokemonID, level, attack, defence, hp]);
+  }, [pokemonID, level, attack, defence, hp, isShadow]);
 
   return (
     <Scaffold topBar={<TopAppBar title="PGO Status Calculator" />}>
@@ -140,6 +142,15 @@ export default function TopScreen(props: {
           />
         </div>
         <div>
+          <input
+            type="checkbox"
+            id="shadow"
+            checked={isShadow}
+            onChange={(e) => setIsShadow(e.target.checked)}
+          />
+          <label>Shadow</label>
+        </div>
+        <div>
           <ContainedButton onClick={add}>Add</ContainedButton>
         </div>
         {status !== undefined ? <StatusArea status={status} /> : null}
@@ -161,7 +172,9 @@ export default function TopScreen(props: {
               <tbody>
                 {pokeBox.map((status, index) => (
                   <tr key={index}>
-                    <th>{status.name}</th>
+                    <th>
+                      {status.name} {status.isShadow ? "(Shadow)" : ""}
+                    </th>
                     <td>{status.cp}</td>
                     <td>Lv{status.level}</td>
                     <td>
