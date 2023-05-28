@@ -9,7 +9,8 @@ export interface IPokemonRepository {
     level: number,
     attack: number,
     defence: number,
-    hp: number
+    hp: number,
+    isShadow: boolean
   ): IPokemonStatus;
 
   findLevel(

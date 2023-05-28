@@ -19,7 +19,8 @@ export class PokemonRepository implements IPokemonRepository {
     level: number,
     attack: number,
     defence: number,
-    hp: number
+    hp: number,
+    isShadow: boolean
   ): IPokemonStatus {
     const pokemon = allPokemons.find((p) => p.id == id);
     if (pokemon === undefined) return {} as IPokemonStatus;
@@ -41,12 +42,13 @@ export class PokemonRepository implements IPokemonRepository {
       name: pokemon.name,
       level: level,
       cp: cp,
-      attack: actualAttack,
-      defence: actualDefence,
+      attack: actualAttack * (isShadow ? 1.2 : 1),
+      defence: actualDefence * (isShadow ? 0.833 : 1),
       hp: Math.floor(actualHP),
       attackIV: attack,
       defenceIV: defence,
       hpIV: hp,
+      isShadow: isShadow,
     } as IPokemonStatus;
   }
 

@@ -21,4 +21,5 @@ export interface IPokemonStatus {
   attackIV: number;
   defenceIV: number;
   hpIV: number;
+  isShadow: boolean;
 }
